@@ -82,6 +82,7 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="DialogStyle.Designer.vb">
       <DependentUpon>DialogStyle.vb</DependentUpon>
     </Compile>
@@ -159,6 +160,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="splash.fw.png" />
     <None Include="About.fw.png" />
     <Content Include="Book_Green.ico" />

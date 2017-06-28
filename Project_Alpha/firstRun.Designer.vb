@@ -22,20 +22,10 @@ Partial Class firstRun
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(389, 36)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "本程序自2017年7月31日起将终止维护，项目移交到GitHub社区上运行。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "项目地址：https://github.com/xianrendou/Projec" &
-    "t_Alpha。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "按下同意键，即视您为同意上述用户须知内容，否则，程序将即刻关闭。"
         '
         'Button1
         '
@@ -55,14 +45,27 @@ Partial Class firstRun
         Me.Button2.Text = "拒绝"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkArea = New System.Windows.Forms.LinkArea(45, 43)
+        Me.LinkLabel1.Location = New System.Drawing.Point(21, 9)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(400, 46)
+        Me.LinkLabel1.TabIndex = 3
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "本程序自2017年7月31日起将终止维护，项目移交到GitHub社区上运行。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "项目地址：https://github.com/xianrendou/Projec" &
+    "t_Alpha。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "按下同意键，即视您为同意上述用户须知内容，否则，程序将即刻关闭。"
+        Me.LinkLabel1.UseCompatibleTextRendering = True
+        '
         'firstRun
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(442, 98)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "firstRun"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -71,8 +74,7 @@ Partial Class firstRun
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

@@ -1,6 +1,8 @@
 ﻿Imports Microsoft.Office.Interop
 Imports System.IO
 Imports System.Web
+Imports System.Xml
+
 Public Class MainForm
     Dim tmpTrans As String
     Dim wordop As New Word.Application
@@ -99,5 +101,15 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         worddo = wordop.Documents.Add()
+        Config_File()
+    End Sub
+
+    Private Sub Config_File()
+        Dim config = New XmlDocument()
+        config.Load("config.xml") '读取XML文档
+        Dim fr = config.SelectSingleNode("config").SelectSingleNode("firstrun").InnerText '判断首次运行
+        If fr = "true" Then
+            firstRun.ShowDialog()
+        End If
     End Sub
 End Class

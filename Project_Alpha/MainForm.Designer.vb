@@ -51,33 +51,33 @@ Partial Class MainForm
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.QuitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(39, 21)
-        Me.FileToolStripMenuItem.Text = "&File"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(58, 21)
+        Me.FileToolStripMenuItem.Text = "文件(&F)"
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
-        Me.OpenToolStripMenuItem.Text = "&Open"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Text = "打开(&O)"
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
-        Me.QuitToolStripMenuItem.Text = "&Quit"
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuitToolStripMenuItem.Text = "退出(&Q)"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(47, 21)
-        Me.HelpToolStripMenuItem.Text = "&Help"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(61, 21)
+        Me.HelpToolStripMenuItem.Text = "帮助(&H)"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
-        Me.AboutToolStripMenuItem.Text = "&About"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Text = "关于(&A)"
         '
         'OpenFileDialog1
         '
@@ -91,7 +91,7 @@ Partial Class MainForm
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(139, 23)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Create Word List"
+        Me.Button1.Text = "创建词汇表"
         Me.ToolTip1.SetToolTip(Me.Button1, "Create a word list to Microsoft Word.")
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -101,7 +101,7 @@ Partial Class MainForm
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(119, 23)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Change Style..."
+        Me.Button2.Text = "更改样式"
         Me.ToolTip1.SetToolTip(Me.Button2, "Change the properties of insert Chinese meaning or the color of the text, etc.")
         Me.Button2.UseVisualStyleBackColor = True
         '
