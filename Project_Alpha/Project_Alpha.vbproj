@@ -88,6 +88,12 @@
     <Compile Include="DialogStyle.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="firstRun.Designer.vb">
+      <DependentUpon>firstRun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="firstRun.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogStyle.resx">
       <DependentUpon>DialogStyle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firstRun.resx">
+      <DependentUpon>firstRun.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
