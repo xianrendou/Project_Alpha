@@ -57,13 +57,13 @@ Partial Class MainForm
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.OpenToolStripMenuItem.Text = "打开(&O)"
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.QuitToolStripMenuItem.Text = "退出(&Q)"
         '
         'HelpToolStripMenuItem
@@ -76,14 +76,14 @@ Partial Class MainForm
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.AboutToolStripMenuItem.Text = "关于(&A)"
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.DefaultExt = "txt"
-        Me.OpenFileDialog1.Filter = "Text File|*.txt"
-        Me.OpenFileDialog1.Title = "Open File..."
+        Me.OpenFileDialog1.Filter = "文本文件|*.txt"
+        Me.OpenFileDialog1.Title = "打开..."
         '
         'Button1
         '
@@ -97,6 +97,7 @@ Partial Class MainForm
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(266, 334)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(119, 23)

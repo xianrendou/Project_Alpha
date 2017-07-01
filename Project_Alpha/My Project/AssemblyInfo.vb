@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 '查看程序集特性的值
 
 <Assembly: AssemblyTitle("Project_Alpha")>
-<Assembly: AssemblyDescription("A software for teacher to create English word list quickly.")>
-<Assembly: AssemblyCompany("Ministry of Education, Culture, Sports, Science and Technology")>
+<Assembly: AssemblyDescription("创建词汇表的辅助工具。")>
+<Assembly: AssemblyCompany("2016届中美班")>
 <Assembly: AssemblyProduct("Project_Alpha")>
-<Assembly: AssemblyCopyright("Copyright ©  2015 MEXT")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 Sino-US Class of 2016")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

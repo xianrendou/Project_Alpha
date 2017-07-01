@@ -100,7 +100,13 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        worddo = wordop.Documents.Add()
+        Try
+            worddo = wordop.Documents.Add()
+        Catch ex As Exception
+            MessageBox.Show("没有找到兼容的Microsoft Office，程序将即刻终止。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End
+        End Try
+
         Config_File()
     End Sub
 
