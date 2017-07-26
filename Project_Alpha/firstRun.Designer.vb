@@ -48,7 +48,7 @@ Partial Class firstRun
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.LinkArea = New System.Windows.Forms.LinkArea(45, 43)
+        Me.LinkLabel1.LinkArea = New System.Windows.Forms.LinkArea(44, 43)
         Me.LinkLabel1.Location = New System.Drawing.Point(21, 9)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(400, 46)
@@ -69,6 +69,7 @@ Partial Class firstRun
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "firstRun"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "用户须知"
         Me.ResumeLayout(False)
