@@ -84,12 +84,17 @@ Public Class MainForm
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim i, iCount As Integer
         iCount = ListBox1.Items.Count()
+        Progress.ProgressBar1.Maximum = iCount
+        Progress.Show()
         For i = 0 To iCount - 1
             currentword = ListBox1.Items.Item(i).ToString
             currentPro = Search(currentword)
+            Progress.ProgressBar1.Value = Progress.ProgressBar1.Value + 1
             wordop.Selection.TypeText(currentword & " " & currentPro & " " & tmpTrans & vbCrLf)
         Next
         wordop.Visible = True
+        Progress.Close()
+        Progress.ProgressBar1.Value = 0
     End Sub
 
     Sub readfile()
@@ -116,6 +121,31 @@ Public Class MainForm
         Dim fr = config.SelectSingleNode("config").SelectSingleNode("firstrun").InnerText '判断首次运行
         If fr = "true" Then
             firstRun.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub 保存SToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 保存SToolStripMenuItem.Click
+        If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
+            Try
+                Dim writer As StreamWriter = New StreamWriter(SaveFileDialog1.FileName.ToString)
+                Dim i, iCount As Integer
+                iCount = ListBox1.Items.Count()
+                Progress.ProgressBar1.Maximum = iCount
+                Progress.Show()
+
+                For i = 0 To iCount - 1
+                    currentword = ListBox1.Items.Item(i).ToString
+                    'Progress.Label1.Text = currentword & "，" & iCount.ToString & "个中的第" & i.ToString & "个。"
+                    Progress.ProgressBar1.Value = Progress.ProgressBar1.Value + 1
+                    currentPro = Search(currentword)
+                    writer.WriteLine(currentword & " " & currentPro & " " & tmpTrans)
+                Next
+                writer.Close()
+                Progress.Close()
+                Progress.ProgressBar1.Value = 0
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
         End If
     End Sub
 End Class

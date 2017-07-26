@@ -27,6 +27,7 @@ Partial Class MainForm
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.保存SToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,6 +36,7 @@ Partial Class MainForm
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +51,7 @@ Partial Class MainForm
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.QuitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.保存SToolStripMenuItem, Me.QuitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(58, 21)
         Me.FileToolStripMenuItem.Text = "文件(&F)"
@@ -57,13 +59,22 @@ Partial Class MainForm
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.OpenToolStripMenuItem.Text = "打开(&O)"
+        '
+        '保存SToolStripMenuItem
+        '
+        Me.保存SToolStripMenuItem.Name = "保存SToolStripMenuItem"
+        Me.保存SToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.保存SToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.保存SToolStripMenuItem.Text = "保存(&S)"
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.QuitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.QuitToolStripMenuItem.Text = "退出(&Q)"
         '
         'HelpToolStripMenuItem
@@ -115,6 +126,11 @@ Partial Class MainForm
         Me.ListBox1.Size = New System.Drawing.Size(485, 292)
         Me.ListBox1.TabIndex = 3
         '
+        'SaveFileDialog1
+        '
+        Me.SaveFileDialog1.Filter = "文本文档|*.txt"
+        Me.SaveFileDialog1.Title = "保存到文本文档..."
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -148,4 +164,6 @@ Partial Class MainForm
     Friend WithEvents Button2 As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents 保存SToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

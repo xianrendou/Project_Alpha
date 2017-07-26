@@ -54,12 +54,13 @@ Partial Class firstRun
         Me.LinkLabel1.Size = New System.Drawing.Size(400, 46)
         Me.LinkLabel1.TabIndex = 3
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "本程序自2017年7月31日起将终止维护，项目移交到GitHub社区上运行。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "项目地址：https://github.com/xianrendou/Projec" &
-    "t_Alpha。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "按下同意键，即视您为同意上述用户须知内容，否则，程序将即刻关闭。"
+        Me.LinkLabel1.Text = "本程序自2017年8月5日起将终止维护，项目移交到GitHub社区上运行。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "项目地址：https://github.com/xianrendou/Project" &
+    "_Alpha。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "按下同意键，即视您为同意上述用户须知内容，否则，程序将即刻关闭。"
         Me.LinkLabel1.UseCompatibleTextRendering = True
         '
         'firstRun
         '
+        Me.AcceptButton = Me.Button2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(442, 98)
