@@ -108,10 +108,9 @@ Public Class MainForm
         Try
             worddo = wordop.Documents.Add()
         Catch ex As Exception
-            MessageBox.Show("没有找到兼容的Microsoft Office，程序将即刻终止。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End
+            MessageBox.Show("没有找到兼容的Microsoft Office，导出至Word功能已被禁止。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Button1.Enabled = False
         End Try
-
         Config_File()
     End Sub
 
