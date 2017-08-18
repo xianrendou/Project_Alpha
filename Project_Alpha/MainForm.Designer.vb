@@ -93,7 +93,7 @@ Partial Class MainForm
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.DefaultExt = "txt"
-        Me.OpenFileDialog1.Filter = "文本文件|*.txt"
+        Me.OpenFileDialog1.Filter = "文本文档|*.txt"
         Me.OpenFileDialog1.Title = "打开..."
         '
         'Button1
